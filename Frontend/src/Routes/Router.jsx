@@ -1,0 +1,38 @@
+import { createBrowserRouter } from "react-router-dom";
+import Main from "../Layout/Main";
+import Home from "../Pages/Home";
+import AuthLayout from "../Layout/AuthLayout";
+import Register from "../Pages/Register";
+import VerifyOTP from "../Pages/VerifyOTP";
+import Login from "../Pages/Login";
+import DashboardLayout from "../Layout/DashboardLayout";
+import Dashboard from "../Pages/Dashboard";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      { index: true, element: <Home></Home> },
+    ],
+  },
+  {
+    path: "auth",
+    element: <AuthLayout></AuthLayout>,
+    children: [
+      { index: true, element: <Login></Login> },  
+      { path: "verify-otp", element: <VerifyOTP></VerifyOTP> }, 
+      { path: "Register", element: <Register></Register> }, 
+    ],
+  },
+  {
+    path : 'dashboard',
+    element : <DashboardLayout></DashboardLayout>,
+    children : [
+        {
+            index : true,
+            element : <Dashboard></Dashboard>
+        }
+    ]
+  }
+]);
