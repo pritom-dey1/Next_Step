@@ -60,7 +60,7 @@ ROOT_URLCONF = 'Next_step.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'Templates'], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +71,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'Next_step.wsgi.application'
 
 
@@ -118,3 +117,10 @@ STATIC_URL = 'static/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'redhopeht@gmail.com'
+EMAIL_HOST_PASSWORD = 'nraflrmfmlxhpaob'

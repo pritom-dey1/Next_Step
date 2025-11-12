@@ -7,7 +7,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['id', 'full_name', 'email', 'password']
+        fields = ['id', 'full_name', 'email', 'password', 'user_type']
 
     def create(self, validated_data):
         return User.objects.create_user(**validated_data)
@@ -16,3 +16,6 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
+class VerifyOTPSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    otp = serializers.CharField(max_length=6)
