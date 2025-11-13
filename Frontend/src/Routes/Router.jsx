@@ -7,9 +7,9 @@ import VerifyOTP from "../Pages/VerifyOTP";
 import Login from "../Pages/Login";
 import DashboardLayout from "../Layout/DashboardLayout";
 import Dashboard from "../Pages/Dashboard";
-import AboutSection from "../Pages/AboutSection";
 import Jobs from "../Pages/Jobs";
 import Resources from "../Pages/Resources";
+import About from "../Pages/About/About";
 
 export const router = createBrowserRouter([
   {
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <AboutSection></AboutSection>,
+        element: <About></About>,
       },
       {
         path: "/jobs",
