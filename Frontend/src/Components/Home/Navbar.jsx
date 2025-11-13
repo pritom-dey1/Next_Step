@@ -1,12 +1,19 @@
 import React, { useState, useContext } from "react";
 import Logo from "../../assets/NextstepLogo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { UserContext } from "../../../context/UserContext"; // path ta adjust koro
+import { UserContext } from "../../../context/UserContext"; // path adjust koro
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const { user, loading } = useContext(UserContext);
+  const { user } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    if (user) navigate("/dashboard");
+    else navigate("/auth");
+    setOpen(false); // mobile menu হলে বন্ধ হবে
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-base-100/80 backdrop-blur-md shadow-md z-50 transition-colors duration-500">
@@ -36,26 +43,12 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-5">
-          {/*  Toggle Button */}
           <button
-            onClick={handleThemeToggle}
-            className="relative flex items-center justify-between w-14 h-7 bg-gray-200 dark:bg-gray-700 rounded-full p-1 transition-all duration-500"
-          >
-            <div
-              className={`absolute top-1 left-1 w-5 h-5 rounded-full bg-white shadow-md transform transition-transform duration-500 ${
-                theme === "dark" ? "translate-x-7" : ""
-              }`}
-            ></div>
-            <Sun className="text-yellow-500 w-5 h-5" />
-            <Moon className="text-gray-600 dark:text-gray-200 w-5 h-5" />
-          </button>
-
-          <NavLink
-            to="/auth"
+            onClick={handleButtonClick}
             className="px-5 py-2.5 bg-[#0a65cc] text-white uppercase font-medium rounded-md hover:bg-[#0851a5] transition duration-300"
           >
-            Explore Now
-          </NavLink>
+            {user ? "Dashboard" : "Explore Now"}
+          </button>
         </div>
 
         <div className="md:hidden flex items-center">
@@ -80,26 +73,11 @@ const Navbar = () => {
             </NavLink>
           ))}
 
-          <NavLink
-            to="/auth"
-            onClick={() => setOpen(false)}
+          <button
+            onClick={handleButtonClick}
             className="px-5 py-2 bg-[#0a65cc] text-white rounded-md hover:bg-[#0851a5] transition"
           >
-            Explore Now
-          </NavLink>
-
-          {/*  Mobile Toggle */}
-          <button
-            onClick={handleThemeToggle}
-            className="relative flex items-center justify-between w-14 h-7 bg-gray-200 dark:bg-gray-700 rounded-full p-1 mt-2 transition-all duration-500"
-          >
-            <div
-              className={`absolute top-1 left-1 w-5 h-5 rounded-full bg-white shadow-md transform transition-transform duration-500 ${
-                theme === "dark" ? "translate-x-7" : ""
-              }`}
-            ></div>
-            <Sun className="text-yellow-500 w-5 h-5" />
-            <Moon className="text-gray-600 dark:text-gray-200 w-5 h-5" />
+            {user ? "Dashboard" : "Explore Now"}
           </button>
         </div>
       )}
