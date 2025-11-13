@@ -32,13 +32,13 @@ const ExtraAbout = () => {
         </p>
 
         {/* Mentor Cards */}
-        <div className="flex items-center justify-center gap-10">
+        <div className="flex flex-wrap justify-center gap-6">
           {mentors.map((mentor, index) => (
             <div
               key={index}
-              className="bg-base-100 shadow-lg rounded-xl p-6 flex flex-col items-center text-center hover:shadow-2xl transition"
+              className="bg-base-100 shadow-lg rounded-xl p-6 flex flex-col items-center text-center hover:shadow-2xl transition w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
             >
-              <img 
+              <img
                 src={mentor.image}
                 alt=""
                 className="w-20 h-20 rounded-sm object-cover mb-4"

@@ -8,16 +8,44 @@ import Asana from "../../assets/logo (1).png";
 
 const MarqueE = () => {
   return (
-    <div className="bg-[#0a65cc] py-4">
+    <div className="bg-[#0a65cc] py-4 overflow-x-auto">
       <Marquee gradient={false} speed={60}>
-        <div className="flex items-center justify-between w-[100vw] ml-26">
-          <img src={Spotify} alt="Spotify" className="h-12 object-contain" />
-          <img src={Slack} alt="Slack" className="h-12 object-contain" />
-          <img src={Adobe} alt="Adobe" className="h-12 object-contain" />
-          <img src={Linear} alt="Linear" className="h-12 object-contain" />
-          <img src={Asana} alt="Asana" className="h-12 object-contain" />
-          <img src={Slack} alt="Slack" className="h-12 object-contain" />
-          <img src={Adobe} alt="Adobe" className="h-12 object-contain" />
+        <div className="flex flex-row items-center gap-6 lg:gap-12 px-4">
+          <img
+            src={Spotify}
+            alt="Spotify"
+            className="h-8 sm:h-10 md:h-12 object-contain"
+          />
+          <img
+            src={Slack}
+            alt="Slack"
+            className="h-8 sm:h-10 md:h-12 object-contain"
+          />
+          <img
+            src={Adobe}
+            alt="Adobe"
+            className="h-8 sm:h-10 md:h-12 object-contain"
+          />
+          <img
+            src={Linear}
+            alt="Linear"
+            className="h-8 sm:h-10 md:h-12 object-contain"
+          />
+          <img
+            src={Asana}
+            alt="Asana"
+            className="h-8 sm:h-10 md:h-12 object-contain"
+          />
+          <img
+            src={Slack}
+            alt="Slack"
+            className="h-8 sm:h-10 md:h-12 object-contain"
+          />
+          <img
+            src={Adobe}
+            alt="Adobe"
+            className="h-8 sm:h-10 md:h-12 object-contain"
+          />
         </div>
       </Marquee>
     </div>
