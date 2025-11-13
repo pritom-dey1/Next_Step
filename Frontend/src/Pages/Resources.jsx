@@ -7,7 +7,20 @@ const Resources = () => {
       <Helmet>
         <title>NextStep | Resources</title>
       </Helmet>
-      <h1>This is resources page here...</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
+      <h1>This is Resources Page</h1>
     </div>
   );
 };

@@ -1,15 +1,18 @@
-import React from 'react'
-import Hero from '../Components/Home/Hero'
-import Marquee from '../Components/Home/Marquee'
-import MarqueE from '../Components/Home/Marquee'
+import React from "react";
+import Hero from "../Components/Home/Hero";
+import MarqueE from "../Components/Home/Marquee";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
     <div>
-        <Hero></Hero>
-        <MarqueE></MarqueE>
-     </div>
-  )
-}
+      <Helmet>
+        <title>NextStep | Home</title>
+      </Helmet>
+      <Hero></Hero>
+      <MarqueE></MarqueE>
+    </div>
+  );
+};
 
-export default Home
+export default Home;

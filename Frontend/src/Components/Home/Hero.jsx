@@ -1,14 +1,10 @@
 import React from "react";
 import HeroImg from "../../assets/hero.png";
 import { NavLink } from "react-router-dom"; 
-import { Helmet } from "react-helmet";
-
 const Hero = () => {
   return (
     <div className="max-w-[1300px] mx-auto flex flex-col-reverse lg:flex-row items-center min-h-screen justify-between px-4 lg:px-0">
-      <Helmet>
-        <title>NextStep | Home</title>
-      </Helmet>
+     
       {/* Text Section */}
       <div className="flex flex-col gap-1 lg:w-[55%] w-full">
         <h1 className="text-[55px] uppercase font-medium leading-tight">

@@ -7,7 +7,7 @@ import VerifyOTP from "../Pages/VerifyOTP";
 import Login from "../Pages/Login";
 import DashboardLayout from "../Layout/DashboardLayout";
 import Dashboard from "../Pages/Dashboard";
-import About from "../Pages/About";
+import AboutSection from "../Pages/AboutSection";
 import Jobs from "../Pages/Jobs";
 import Resources from "../Pages/Resources";
 
@@ -15,37 +15,43 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    children: [{ index: true, element: <Home></Home> }],
-  },
-  {
-    path: "auth",
-    element: <AuthLayout></AuthLayout>,
     children: [
-      { index: true, element: <Login></Login> },
-      { path: "verify-otp", element: <VerifyOTP></VerifyOTP> },
-      { path: "Register", element: <Register></Register> },
-    ],
-  },
-  {
-    path: "dashboard",
-    element: <DashboardLayout></DashboardLayout>,
-    children: [
+      // { index: true, element: <Home></Home> },
       {
-        index: true,
-        element: <Dashboard></Dashboard>,
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/about",
+        element: <AboutSection></AboutSection>,
+      },
+      {
+        path: "/jobs",
+        element: <Jobs></Jobs>,
+      },
+      {
+        path: "/resources",
+        element: <Resources></Resources>,
+      },
+      {
+        path: "/auth",
+        element: <AuthLayout></AuthLayout>,
+        children: [
+          { index: true, element: <Login></Login> },
+          { path: "verify-otp", element: <VerifyOTP></VerifyOTP> },
+          { path: "Register", element: <Register></Register> },
+        ],
+      },
+      {
+        path: "/dashboard",
+        element: <DashboardLayout></DashboardLayout>,
+        children: [
+          {
+            index: true,
+            element: <Dashboard></Dashboard>,
+          },
+        ],
       },
     ],
   },
-  {
-    path: "/about",
-    element: <About></About>,
-  },
-  {
-    path: "/jobs",
-    element: <Jobs></Jobs>,
-  },
-  {
-    path: "/resources",
-    element: <Resources></Resources>,
-  }
 ]);
