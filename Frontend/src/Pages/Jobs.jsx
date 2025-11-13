@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Card from "./Card";
+import { Outlet } from "react-router-dom";
 
 const Jobs = () => {
   return (
@@ -166,6 +167,7 @@ const Jobs = () => {
 
           {/* Card */}
           <Card></Card>
+          <Outlet></Outlet>
         </div>
       </section>
     </div>

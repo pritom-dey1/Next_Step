@@ -1,5 +1,6 @@
 import React from "react";
 import img1 from "../assets/authentication1.png";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   return (
@@ -20,7 +21,9 @@ const Card = () => {
         <h6>Full Time</h6>
         <h6>$40000-$42000</h6>
         <h6>New-York, USA</h6>
-        <button className="btn btn-active btn-accent">Job Details</button>
+        <Link to="/details">
+          <button className="btn btn-active btn-accent">Job Details</button>
+        </Link>
       </div>
     </section>
   );
