@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
         element: <Jobs></Jobs>,
       },
       {
-        path: "/details",
+        path: "/job-details",
         element: <Job_Details></Job_Details>,
       },
       {

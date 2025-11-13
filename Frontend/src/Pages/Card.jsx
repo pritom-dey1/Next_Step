@@ -21,7 +21,7 @@ const Card = () => {
         <h6>Full Time</h6>
         <h6>$40000-$42000</h6>
         <h6>New-York, USA</h6>
-        <Link to="/details">
+        <Link to="/job-details">
           <button className="btn btn-active btn-accent">Job Details</button>
         </Link>
       </div>
