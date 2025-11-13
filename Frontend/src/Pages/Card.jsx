@@ -9,7 +9,9 @@ const Card = () => {
           <img className="w-90 h-auto" src={img1} alt="" />
         </div>
         <div>
-          <h1 className="font-semibold text-2xl my-2">Forward Security Director</h1>
+          <h1 className="font-semibold text-2xl my-2">
+            Forward Security Director
+          </h1>
           <p>Bauch, Schuppe and Schulist Co.</p>
         </div>
       </div>
@@ -18,9 +20,7 @@ const Card = () => {
         <h6>Full Time</h6>
         <h6>$40000-$42000</h6>
         <h6>New-York, USA</h6>
-        <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
-          Responsive
-        </button>
+        <button className="btn btn-active btn-accent">Job Details</button>
       </div>
     </section>
   );
