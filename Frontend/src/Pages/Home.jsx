@@ -3,7 +3,7 @@ import Hero from "../Components/Home/Hero";
 import MarqueE from "../Components/Home/Marquee";
 import { Helmet } from "react-helmet";
 // import TrustedCompany from "../Components/Home/TrustedCompany";
-// import CareerTest from "../Components/Home/CareerTest";
+import CareerTest from "../Components/Home/CareerTest";
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       <Hero></Hero>
       <MarqueE></MarqueE>
       {/* <TrustedCompany></TrustedCompany> */}
-      {/* <CareerTest></CareerTest> */}
+      <CareerTest></CareerTest>
     </div>
   );
 };

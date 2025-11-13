@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
 
 const CareerTest = () => {
+  const navigate = useNavigate(); // ✅ Initialize navigate
   const questions = [
     {
       id: 1,
@@ -58,6 +60,10 @@ const CareerTest = () => {
     setResult(career);
   };
 
+  const goToResource = () => {
+    navigate("/resources"); //  Navigate to resource page
+  };
+
   return (
     <section className="min-h-screen flex flex-col items-center justify-center bg-base-200 px-4 py-10">
       <div className="max-w-3xl w-full bg-base-100 shadow-lg rounded-2xl p-8">
@@ -105,15 +111,26 @@ const CareerTest = () => {
               Your Suggested Career:
             </h3>
             <p className="text-3xl font-bold mb-8">{result}</p>
-            <button
-              onClick={() => {
-                setResult(null);
-                setAnswers({});
-              }}
-              className="px-5 py-2 bg-[#0a65cc] text-white rounded-md hover:bg-[#0851a5] transition"
-            >
-              Retake Test
-            </button>
+
+            <div className="flex justify-center gap-4">
+              <button
+                onClick={() => {
+                  setResult(null);
+                  setAnswers({});
+                }}
+                className="px-5 py-2 bg-[#0a65cc] text-white rounded-md hover:bg-[#0851a5] transition"
+              >
+                Retake Test
+              </button>
+
+              {/*  Find Resource Button */}
+              <button
+                onClick={goToResource}
+                className="px-5 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition"
+              >
+                Find Resource
+              </button>
+            </div>
           </div>
         )}
       </div>
