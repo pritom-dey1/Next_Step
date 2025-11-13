@@ -67,7 +67,7 @@ const CareerTest = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center bg-base-200 px-4 py-10">
       <div className="max-w-3xl w-full bg-base-100 shadow-lg rounded-2xl p-8">
-        <h2 className="text-3xl font-bold text-center text-[#0a65cc] mb-8">
+        <h2 className="text-3xl font-bold text-center text-[#0a65cc] my-8">
            Career Path Finder
         </h2>
 

@@ -2,8 +2,7 @@ import React from "react";
 import Hero from "../Components/Home/Hero";
 import MarqueE from "../Components/Home/Marquee";
 import { Helmet } from "react-helmet";
-import CareerTest from "../Components/Home/CareerTest";
-import FAQ from "../Components/FAQ";
+import FAQ from "../Components/Home/FAQ"; 
 
 const Home = () => {
   return (
@@ -14,7 +13,6 @@ const Home = () => {
       <Hero></Hero>
       <MarqueE></MarqueE>
       <FAQ></FAQ>
-      <CareerTest></CareerTest>
     </div>
   );
 };

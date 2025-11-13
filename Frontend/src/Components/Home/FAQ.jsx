@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FAQ = () => {
   const faqs = [
@@ -44,6 +45,11 @@ const FAQ = () => {
               <p className="mt-2 text-gray-700">{faq.answer}</p>
             </details>
           ))}
+        </div>
+        <div className="mt-5 flex justify-center">
+          <Link to="/CareerTest">
+             <button className="btn btn-neutral btn-outline">Career Path Finder</button>
+          </Link>
         </div>
       </div>
     </section>
