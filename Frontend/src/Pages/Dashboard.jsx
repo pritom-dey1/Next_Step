@@ -152,7 +152,7 @@
 
   // ------------------- Dashboard -------------------
   export default function Dashboard() {
-    const { user, setUser ,loading } = useContext(UserContext);
+    const { user, setUser ,logout ,loading } = useContext(UserContext);
     const [showUpdate, setShowUpdate] = useState(false);
     const [activeTab, setActiveTab] = useState("resource");
     const [message, setMessage] = useState("");
@@ -288,12 +288,23 @@
               </p>
             </div>
           </div>
-          <button
+<div className="flex flex-col">
+            <button
             onClick={() => setShowUpdate(true)}
             className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
           >
             Update Profile
           </button>
+<button
+  onClick={() => {
+    logout()
+    window.location.href = "/auth" 
+  }}
+  className="bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700 transition mt-3"
+>
+  Log Out
+</button>
+</div>
         </div>
 
 

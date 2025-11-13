@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import Card from "./Card";
 import { Outlet } from "react-router-dom";
 import axios from "axios";
+import api from "../apis/axios";
 
 const Jobs = () => {
   const [jobs, setJobs] = useState([]);
@@ -31,7 +32,7 @@ const Jobs = () => {
         }
       });
 
-      const res = await axios.get("http://127.0.0.1:8000/api/jobs/", { params });
+      const res = await api.get("/jobs/", { params });
       setJobs(res.data.results || res.data);
     } catch (err) {
       console.error("Fetch Jobs Error:", err);
@@ -42,7 +43,7 @@ const Jobs = () => {
   // Fetch filter options from backend
   const fetchFilterOptions = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/api/jobs/filters/");
+      const res = await api.get("/jobs/filters/");
       setFilterOptions({
         locations: res.data.locations,
         roles: res.data.roles,

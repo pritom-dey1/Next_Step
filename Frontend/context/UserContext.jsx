@@ -19,7 +19,6 @@ export const UserProvider = ({ children }) => {
   const fetchProfile = async () => {
     const token = localStorage.getItem("access");
 
-    // Token না থাকলে শুধু loading বন্ধ করো, user null করো না
     if (!token) {
       setLoading(false);
       return;
@@ -44,7 +43,6 @@ export const UserProvider = ({ children }) => {
     }
   };
 
-  // 🔹 লগআউট করলে localStorage এবং state দুই জায়গা থেকেই user মুছে যাবে
   const logout = () => {
     localStorage.removeItem("access");
     localStorage.removeItem("refresh");

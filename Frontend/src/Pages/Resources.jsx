@@ -1,27 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import CourseCollection from "./CourseCollection";
 
 const Resources = () => {
+  const [search, setSearch] = useState("");
+
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>NextStep | Resources</title>
       </Helmet>
-      <div className="h-50 bg-black flex items-center justify-center pt-20">
-        <h1 className="text-white  font-bold text-4xl text-center">
-          All Resources
+
+      <header className="bg-gradient-to-r from-gray-900 to-black py-20 flex flex-col items-center justify-center shadow-md">
+        <h1 className="text-white font-extrabold text-5xl text-center tracking-wide">
+          Explore Learning Resources
         </h1>
-      </div>
-      <div className="relative">
+        <p className="text-gray-300 mt-4 text-lg max-w-2xl text-center">
+          Discover the best curated learning platforms and boost your skills.
+        </p>
+      </header>
+
+      <div className="max-w-5xl mx-auto relative mt-10 px-4">
         <input
           type="text"
-          placeholder="Courses Collection"
-          className="w-full pl-10 mt-5 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          placeholder="Search resources by title or skill..."
+          className="w-full pl-12 pr-4 py-3 text-lg border border-gray-300 rounded-2xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 mt-5  w-5 absolute left-3 top-3 text-gray-400"
+          className="h-6 w-6 absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -34,7 +43,10 @@ const Resources = () => {
           />
         </svg>
       </div>
-      <CourseCollection></CourseCollection>
+
+      <section className="mt-10 pb-20">
+        <CourseCollection search={search} />
+      </section>
     </div>
   );
 };
