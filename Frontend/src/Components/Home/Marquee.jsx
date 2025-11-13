@@ -8,9 +8,9 @@ import Asana from "../../assets/logo (1).png";
 
 const MarqueE = () => {
   return (
-    <div className="bg-[#0a65cc] py-4 overflow-x-auto">
+    <div className="bg-[#0a65cc] py-4 overflow-x-auto sm:mt-5">
       <Marquee gradient={false} speed={60}>
-        <div className="flex flex-row items-center gap-6 lg:gap-12 px-4">
+        <div className="flex flex-row items-center gap-6 lg:gap-12 px-4 ">
           <img
             src={Spotify}
             alt="Spotify"

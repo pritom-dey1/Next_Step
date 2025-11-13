@@ -15,7 +15,7 @@ const Hero = () => {
         </p>
         <NavLink
           to="/jobs"
-          className="w-full sm:w-1/2 md:w-1/3 lg:w-[18%] mt-4 flex items-center justify-center py-2 bg-[#0a65cc] text-white uppercase font-medium rounded-md hover:bg-[#0851a5] transition duration-300 text-sm sm:text-base md:text-lg lg:text-[18px] mx-auto lg:mx-0"
+          className="w-full sm:w-1/2 mb-5 md:w-1/3 lg:w-[18%] mt-4 flex items-center justify-center py-2 bg-[#0a65cc] text-white uppercase font-medium rounded-md hover:bg-[#0851a5] transition duration-300 text-sm sm:text-base md:text-lg lg:text-[18px] mx-auto lg:mx-0"
         >
           Find Jobs
         </NavLink>
