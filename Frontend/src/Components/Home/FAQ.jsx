@@ -48,7 +48,7 @@ const FAQ = () => {
         </div>
         <div className="mt-5 flex justify-center">
           <Link to="/CareerTest">
-             <button className="btn btn-neutral btn-outline">Career Path Finder</button>
+             <button className="btn btn-neutral btn-outline">Career Path Finder </button>
           </Link>
         </div>
       </div>
