@@ -5,6 +5,7 @@ import api from "../apis/axios";
 import LoginImg from "../assets/login.webp";
 import { NavLink } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
+import { Helmet } from "react-helmet";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -47,6 +48,9 @@ export default function Login() {
       className="min-h-screen w-full flex items-center justify-center bg-cover bg-center relative overflow-hidden"
       style={{ backgroundImage: `url(${LoginImg})` }}
     >
+      <Helmet>
+        <title>NextStep | Login</title>
+      </Helmet>
       <div className="absolute inset-0 bg-black/30"></div>
 
       <form

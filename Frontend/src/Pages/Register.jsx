@@ -3,6 +3,7 @@ import { Eye, EyeOff } from "lucide-react";
 import api from "../apis/axios";
 import LoginImg from "../assets/login.webp";
 import { Link, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -101,6 +102,9 @@ export default function Register() {
       className="min-h-screen w-full flex items-center justify-center bg-cover bg-center relative overflow-hidden"
       style={{ backgroundImage: `url(${LoginImg})` }}
     >
+      <Helmet>
+        <title>NextStep | Register</title>
+      </Helmet>
       <div className="absolute inset-0 bg-black/30"></div>
 
       <form
@@ -152,69 +156,105 @@ export default function Register() {
 
         <div className="grid grid-cols-2 gap-3 mb-4">
           <div>
-            <label className="block mb-1 font-semibold text-white">User Type</label>
+            <label className="block mb-1 font-semibold text-white">
+              User Type
+            </label>
             <select
               name="user_type"
               value={formData.user_type}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500 outline-none text-gray-300 bg-transparent "
             >
-             
-             
-             <option value="">Select</option>
-              <option value="candidate" className="text-gray-900 bg-blue-100">Candidate</option>
-              <option value="recruiter" className="text-gray-900 bg-blue-100">Recruiter</option>
+              <option value="">Select</option>
+              <option value="candidate" className="text-gray-900 bg-blue-100">
+                Candidate
+              </option>
+              <option value="recruiter" className="text-gray-900 bg-blue-100">
+                Recruiter
+              </option>
             </select>
           </div>
 
           <div>
-            <label className="block mb-1 font-semibold text-white">Education</label>
+            <label className="block mb-1 font-semibold text-white">
+              Education
+            </label>
             <select
               name="education_level"
               value={formData.education_level}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500 outline-none text-gray-300 bg-transparent"
             >
-                             <option value="">Select</option>
+              <option value="">Select</option>
 
-              <option value="High School" className="text-gray-900 bg-blue-100">High School</option>
-              <option value="Undergraduate" className="text-gray-900 bg-blue-100">Undergraduate</option>
-              <option value="Graduate" className="text-gray-900 bg-blue-100">Graduate</option>
+              <option value="High School" className="text-gray-900 bg-blue-100">
+                High School
+              </option>
+              <option
+                value="Undergraduate"
+                className="text-gray-900 bg-blue-100"
+              >
+                Undergraduate
+              </option>
+              <option value="Graduate" className="text-gray-900 bg-blue-100">
+                Graduate
+              </option>
             </select>
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-3 mb-6">
           <div>
-            <label className="block mb-1 font-semibold text-white">Experience</label>
+            <label className="block mb-1 font-semibold text-white">
+              Experience
+            </label>
             <select
               name="experience_level"
               value={formData.experience_level}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500 outline-none text-gray-300 bg-transparent"
             >
-                             <option value="">Select</option>
+              <option value="">Select</option>
 
-              <option value="Fresher" className="text-gray-900 bg-blue-100">Fresher</option>
-              <option value="Junior" className="text-gray-900 bg-blue-100">Junior</option>
-              <option value="Mid " className="text-gray-900 bg-blue-100">Mid</option>
+              <option value="Fresher" className="text-gray-900 bg-blue-100">
+                Fresher
+              </option>
+              <option value="Junior" className="text-gray-900 bg-blue-100">
+                Junior
+              </option>
+              <option value="Mid " className="text-gray-900 bg-blue-100">
+                Mid
+              </option>
             </select>
           </div>
 
           <div>
-            <label className="block mb-1 font-semibold text-white">Career Track</label>
+            <label className="block mb-1 font-semibold text-white">
+              Career Track
+            </label>
             <select
               name="preferred_career_track"
               value={formData.preferred_career_track}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500 outline-none text-gray-300 bg-transparent"
             >
-                             <option value="">Select</option>
+              <option value="">Select</option>
 
-              <option value="Web Development"   className="text-gray-900 bg-blue-100" >Web Development</option>
-              <option value="Data" className="text-gray-900 bg-blue-100">Data</option>
-              <option value="Design" className="text-gray-900 bg-blue-100">Design</option>
-              <option value="Marketing" className="text-gray-900 bg-blue-100">Marketing</option>
+              <option
+                value="Web Development"
+                className="text-gray-900 bg-blue-100"
+              >
+                Web Development
+              </option>
+              <option value="Data" className="text-gray-900 bg-blue-100">
+                Data
+              </option>
+              <option value="Design" className="text-gray-900 bg-blue-100">
+                Design
+              </option>
+              <option value="Marketing" className="text-gray-900 bg-blue-100">
+                Marketing
+              </option>
             </select>
           </div>
         </div>
@@ -227,8 +267,16 @@ export default function Register() {
           {loading ? "Registering..." : "Register"}
         </button>
 
-        {error && <p className="text-red-500 mt-3 text-sm text-center font-bold">{error}</p>}
-        {success && <p className="text-green-600 mt-3 text-sm text-center">Registration successful! You can now log in.</p>}
+        {error && (
+          <p className="text-red-500 mt-3 text-sm text-center font-bold">
+            {error}
+          </p>
+        )}
+        {success && (
+          <p className="text-green-600 mt-3 text-sm text-center">
+            Registration successful! You can now log in.
+          </p>
+        )}
 
         <div className="mt-2 text-center flex flex-col">
           <Link to="/auth" className="text-blue-400  font-medium mr-4">
