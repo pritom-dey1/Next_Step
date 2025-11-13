@@ -9,7 +9,7 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import Dashboard from "../Pages/Dashboard";
 import Jobs from "../Pages/Jobs";
 import Resources from "../Pages/Resources";
-import About from "../Pages/About/About"; 
+import About from "../Pages/About/About";
 import CareerTest from "../Components/Home/CareerTest";
 import Job_Details from "../Pages/About/Job_Details";
 
@@ -30,12 +30,10 @@ export const router = createBrowserRouter([
       {
         path: "/jobs",
         element: <Jobs></Jobs>,
-        children: [
-          {
-            path: "jobs/details",
-            element: <Job_Details></Job_Details>,
-          },
-        ]
+      },
+      {
+        path: "/details",
+        element: <Job_Details></Job_Details>,
       },
       {
         path: "/resources",
