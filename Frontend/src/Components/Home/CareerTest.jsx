@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
+import { useNavigate } from "react-router-dom"; //  Import useNavigate
 
 const CareerTest = () => {
-  const navigate = useNavigate(); // ✅ Initialize navigate
+  const navigate = useNavigate(); // Initialize navigate
   const questions = [
     {
       id: 1,
@@ -51,11 +51,11 @@ const CareerTest = () => {
 
     let career = "General Professional";
 
-    if (logic && preference) career = "Software Engineer 💻";
-    else if (creative && preference) career = "UI/UX Designer 🎨";
-    else if (manage && !preference) career = "Project Manager 📊";
-    else if (!preference && creative) career = "Teacher or Trainer 👩‍🏫";
-    else if (logic && !preference) career = "Data Analyst 📈";
+    if (logic && preference) career = "Software Engineer ";
+    else if (creative && preference) career = "UI/UX Designer ";
+    else if (manage && !preference) career = "Project Manager ";
+    else if (!preference && creative) career = "Teacher or Trainer ";
+    else if (logic && !preference) career = "Data Analyst ";
 
     setResult(career);
   };
@@ -68,7 +68,7 @@ const CareerTest = () => {
     <section className="min-h-screen flex flex-col items-center justify-center bg-base-200 px-4 py-10">
       <div className="max-w-3xl w-full bg-base-100 shadow-lg rounded-2xl p-8">
         <h2 className="text-3xl font-bold text-center text-[#0a65cc] mb-8">
-          🧭 Career Path Finder
+           Career Path Finder
         </h2>
 
         {!result ? (
