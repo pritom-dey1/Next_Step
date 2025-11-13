@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Card from "./Card";
 
 const Jobs = () => {
   return (
@@ -10,13 +11,15 @@ const Jobs = () => {
       <div className="h-50 bg-black flex items-center justify-center pt-20">
         <h1 className="text-white  font-bold text-4xl text-center">Jobs</h1>
       </div>
-      <section>
+      <section className="flex flex-row gap-10 max-w-7xl px-4 mx-auto">
         {/* Sidebar */}
         <div
           className="w-1/3 p-7 rounded-lg mt-7"
           style={{ backgroundColor: "rgba(235, 245, 244, 1)" }}
         >
-          <h3 className="font-semibold text-lg text-wh my-2">Search by Job Title</h3>
+          <h3 className="font-semibold text-lg text-wh my-2">
+            Search by Job Title
+          </h3>
           <div className="relative">
             <input
               type="text"
@@ -51,7 +54,33 @@ const Jobs = () => {
               <option value="Dhaka">Dhaka</option>
               <option value="Chittagong">Chittagong</option>
               <option value="Rajshahi">Rajshahi</option>
+              <option value="Khulna">Khulna</option>
               <option value="Sylhet">Sylhet</option>
+              <option value="Barishal">Barishal</option>
+              <option value="Rangpur">Rangpur</option>
+              <option value="Mymensingh">Mymensingh</option>
+              <option value="Gazipur">Gazipur</option>
+              <option value="Narayanganj">Narayanganj</option>
+              <option value="Cumilla">Cumilla</option>
+              <option value="Noakhali">Noakhali</option>
+              <option value="Feni">Feni</option>
+              <option value="Brahmanbaria">Brahmanbaria</option>
+              <option value="Cox’s Bazar">Cox’s Bazar</option>
+              <option value="Tangail">Tangail</option>
+              <option value="Narsingdi">Narsingdi</option>
+              <option value="Faridpur">Faridpur</option>
+              <option value="Kushtia">Kushtia</option>
+              <option value="Jessore">Jessore</option>
+              <option value="Pabna">Pabna</option>
+              <option value="Bogura">Bogura</option>
+              <option value="Dinajpur">Dinajpur</option>
+              <option value="Naogaon">Naogaon</option>
+              <option value="Jamalpur">Jamalpur</option>
+              <option value="Netrokona">Netrokona</option>
+              <option value="Moulvibazar">Moulvibazar</option>
+              <option value="Habiganj">Habiganj</option>
+              <option value="Patuakhali">Patuakhali</option>
+              <option value="Chuadanga">Chuadanga</option>
             </select>
           </div>
           {/* Role */}
@@ -117,6 +146,26 @@ const Jobs = () => {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Card Section */}
+        <div className="w-2/3 rounded-lg pl-3 mt-7">
+          {/* Headline */}
+          <div className="flex items-center justify-between">
+            <h3 className=" text-lg text-wh ">Search by Job Title</h3>
+            {/* Sort by latest */}
+            <select
+              className=" border border-gray-300 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Sort by latest
+              </option>
+            </select>
+          </div>
+
+          {/* Card */}
+          <Card></Card>
         </div>
       </section>
     </div>
