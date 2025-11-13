@@ -1,4 +1,4 @@
-from rest_framework import generics, filters
+from rest_framework import generics, filters ,permissions
 from .models import Job
 from .serializers import JobSerializer
 from django_filters.rest_framework import DjangoFilterBackend
@@ -63,3 +63,11 @@ class JobRecommendationAPIView(APIView):
             "recommended_jobs_count": recommended_jobs.count(),
             "recommended_jobs": serializer.data,
         })
+
+class JobCreateAPIView(generics.CreateAPIView):
+    queryset = Job.objects.all()
+    serializer_class = JobSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user)

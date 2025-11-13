@@ -13,9 +13,12 @@ class RegisterSerializer(serializers.ModelSerializer):
         return User.objects.create_user(**validated_data)
 
 class UserSerializer(serializers.ModelSerializer):
+    profile_image = serializers.ImageField(use_url=True)
+
     class Meta:
         model = User
         fields = '__all__'
+        read_only_fields = ['id', 'email']
 class VerifyOTPSerializer(serializers.Serializer):
     email = serializers.EmailField()
     otp = serializers.CharField(max_length=6)

@@ -99,7 +99,7 @@ export default function Register() {
 
   return (
     <div
-      className="min-h-screen w-full flex items-center justify-center bg-cover bg-center relative overflow-hidden"
+      className="min-h-screen pt-20 w-full flex items-center justify-center bg-cover bg-center relative overflow-hidden"
       style={{ backgroundImage: `url(${LoginImg})` }}
     >
       <Helmet>
@@ -282,9 +282,7 @@ export default function Register() {
           <Link to="/auth" className="text-blue-400  font-medium mr-4">
             Already have an account? Login
           </Link>
-          <Link to="/" className="text-white hover:text-gray-300 font-medium">
-            Back to Home
-          </Link>
+      
         </div>
       </form>
     </div>

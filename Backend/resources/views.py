@@ -1,4 +1,4 @@
-from rest_framework import generics, filters
+from rest_framework import generics, filters ,permissions
 from .models import LearningResource
 from .serializers import LearningResourceSerializer
 from django_filters.rest_framework import DjangoFilterBackend
@@ -18,3 +18,10 @@ class ResourceDetailAPIView(generics.RetrieveAPIView):
     queryset = LearningResource.objects.all()
     serializer_class = LearningResourceSerializer
     lookup_field = 'id'
+class ResourceCreateAPIView(generics.CreateAPIView):
+    queryset = LearningResource.objects.all()
+    serializer_class = LearningResourceSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save()

@@ -12,8 +12,21 @@ from jobs.models import Job
 from jobs.serializers import JobSerializer
 from resources.models import LearningResource
 from resources.serializers import LearningResourceSerializer
+from rest_framework.parsers import MultiPartParser, FormParser
 
 
+class ProfileUpdateView(APIView):
+    parser_classes = [MultiPartParser, FormParser]
+
+    def patch(self, request):
+        user = request.user
+        serializer = UserSerializer(user, data=request.data, partial=True)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 # ------------------- Registration with OTP -------------------
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()

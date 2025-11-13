@@ -29,12 +29,11 @@ export default function Login() {
       localStorage.setItem("access", res.data.access);
       localStorage.setItem("refresh", res.data.refresh);
 
-      // fetch dashboard/profile data
       const profileRes = await api.get("/accounts/dashboard/", {
         headers: { Authorization: `Bearer ${res.data.access}` },
       });
 
-      setUser(profileRes.data); // context e save
+      setUser(profileRes.data); 
       navigate("/dashboard");
     } catch (err) {
       setError(err.response?.data?.error || "Login failed");
@@ -105,11 +104,7 @@ export default function Login() {
             Register
           </NavLink>
         </div>
-        <div className="flex text-center items-center justify-center gap-1">
-          <NavLink to="/" className="text-blue-500 hover:underline">
-            Back To Home
-          </NavLink>
-        </div>
+     
       </form>
     </div>
   );

@@ -37,6 +37,8 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',  # শুধু JSON
     ),
 }
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),

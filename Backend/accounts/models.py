@@ -39,7 +39,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         ('Web Development', 'Web Development'),
         ('Data', 'Data'),
         ('Design', 'Design'),
-        
         ('Marketing', 'Marketing'),
     ]
 
@@ -53,12 +52,16 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     skills = models.JSONField(default=list, blank=True)
     bio = models.TextField(blank=True, null=True)
-    cv_text = models.TextField(blank=True, null=True)
+    
+    cv_file = models.FileField(upload_to='cvs/', blank=True, null=True)
+    
+    profile_image = models.ImageField(upload_to='profile_images/', blank=True, null=True)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_verified = models.BooleanField(default=False)
     email_otp = models.CharField(max_length=6, blank=True, null=True)
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['full_name']
 
