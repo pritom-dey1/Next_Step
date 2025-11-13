@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/NextstepLogo.png';
 const Footer = () => {
   return (
-    <footer className="bg-white text-black pt-12 pb-6">
+    <footer className="bg-white text-black pt-12 pb-6 border-t border-gray-200">
       <div className="max-w-[1300px] mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* About Section */}
