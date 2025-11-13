@@ -1,24 +1,20 @@
 import React from "react";
+import image1 from "../../assets/authentication1.png";
+import image2 from "../../assets/authentication2.png";
 
 const ExtraAbout = () => {
   const mentors = [
     {
       name: "Abdullah all Mojahid",
       role: "Fronend Developer & Problem Solver",
-      image: "https://via.placeholder.com/150",
+      image: { image1 },
       bio: "Guides students in career planning and skill development with AI-driven insights.",
     },
     {
       name: "Pritom Dey",
       role: "Backend Developer",
-      image: "https://via.placeholder.com/150",
+      image: { image2 },
       bio: "Provides mentorship on coding, internships, and practical industry skills.",
-    },
-    {
-      name: "Ms. Fatima Akter",
-      role: "Learning & Development Specialist",
-      image: "https://via.placeholder.com/150",
-      bio: "Helps students choose learning resources aligned with their career goals.",
     },
   ];
 
@@ -36,16 +32,16 @@ const ExtraAbout = () => {
         </p>
 
         {/* Mentor Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="flex items-center justify-center gap-10">
           {mentors.map((mentor, index) => (
             <div
               key={index}
               className="bg-base-100 shadow-lg rounded-xl p-6 flex flex-col items-center text-center hover:shadow-2xl transition"
             >
-              <img
+              <img 
                 src={mentor.image}
-                alt={mentor.name}
-                className="w-32 h-32 rounded-full object-cover mb-4"
+                alt=""
+                className="w-20 h-20 rounded-sm object-cover mb-4"
               />
               <h2 className="text-xl font-semibold text-[#0a65cc]">
                 {mentor.name}

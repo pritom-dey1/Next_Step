@@ -36,14 +36,26 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-5">
-          {!loading && (
-            <NavLink
-              to={user ? "/dashboard" : "/auth"}
-              className="px-5 py-2.5 bg-[#0a65cc] text-white uppercase font-medium rounded-md hover:bg-[#0851a5] transition duration-300"
-            >
-              {user ? "Dashboard" : "Explore Now"}
-            </NavLink>
-          )}
+          {/*  Toggle Button */}
+          <button
+            onClick={handleThemeToggle}
+            className="relative flex items-center justify-between w-14 h-7 bg-gray-200 dark:bg-gray-700 rounded-full p-1 transition-all duration-500"
+          >
+            <div
+              className={`absolute top-1 left-1 w-5 h-5 rounded-full bg-white shadow-md transform transition-transform duration-500 ${
+                theme === "dark" ? "translate-x-7" : ""
+              }`}
+            ></div>
+            <Sun className="text-yellow-500 w-5 h-5" />
+            <Moon className="text-gray-600 dark:text-gray-200 w-5 h-5" />
+          </button>
+
+          <NavLink
+            to="/auth"
+            className="px-5 py-2.5 bg-[#0a65cc] text-white uppercase font-medium rounded-md hover:bg-[#0851a5] transition duration-300"
+          >
+            Explore Now
+          </NavLink>
         </div>
 
         <div className="md:hidden flex items-center">
@@ -68,15 +80,27 @@ const Navbar = () => {
             </NavLink>
           ))}
 
-          {!loading && (
-            <NavLink
-              to={user ? "/dashboard" : "/auth"}
-              onClick={() => setOpen(false)}
-              className="px-5 py-2 bg-[#0a65cc] text-white rounded-md hover:bg-[#0851a5] transition"
-            >
-              {user ? "Dashboard" : "Explore Now"}
-            </NavLink>
-          )}
+          <NavLink
+            to="/auth"
+            onClick={() => setOpen(false)}
+            className="px-5 py-2 bg-[#0a65cc] text-white rounded-md hover:bg-[#0851a5] transition"
+          >
+            Explore Now
+          </NavLink>
+
+          {/*  Mobile Toggle */}
+          <button
+            onClick={handleThemeToggle}
+            className="relative flex items-center justify-between w-14 h-7 bg-gray-200 dark:bg-gray-700 rounded-full p-1 mt-2 transition-all duration-500"
+          >
+            <div
+              className={`absolute top-1 left-1 w-5 h-5 rounded-full bg-white shadow-md transform transition-transform duration-500 ${
+                theme === "dark" ? "translate-x-7" : ""
+              }`}
+            ></div>
+            <Sun className="text-yellow-500 w-5 h-5" />
+            <Moon className="text-gray-600 dark:text-gray-200 w-5 h-5" />
+          </button>
         </div>
       )}
     </nav>
