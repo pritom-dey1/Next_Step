@@ -7,3 +7,4 @@ urlpatterns = [
     path('<int:id>/', JobDetailAPIView.as_view(), name='job-detail'),
     path('filters/', JobFilterOptionsAPIView.as_view(), name='job-filters'),
 ]
+

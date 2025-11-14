@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'resources',
     'django.contrib.admin',
     'corsheaders',
+    'ai_engine',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
