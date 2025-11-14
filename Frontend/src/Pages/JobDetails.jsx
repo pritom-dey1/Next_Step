@@ -17,7 +17,7 @@ const JobDetails = () => {
         </h1>
       </div>
 
-      {/* Main Section */}
+      {/* Main Details Section */}
       <div className="flex flex-col lg:flex-row gap-6 my-10 px-4 lg:px-10">
         {/* Image Section */}
         <div className="lg:w-1/3 flex justify-center">
@@ -43,7 +43,7 @@ const JobDetails = () => {
             </p>
             <p>
               <span className="font-semibold text-gray-800">Salary:</span>{" "}
-              $40,000 – $42,000
+              $40,000 - $42,000
             </p>
             <p>
               <span className="font-semibold text-gray-800">Job Type:</span>{" "}
@@ -70,7 +70,7 @@ const JobDetails = () => {
         <div className="lg:flex items-start justify-between p-8 gap-7">
           {/* Jobs Details, Responsibilities & Skills*/}
           <div className="lg:w-2/3">
-            {/*  */}
+            {/* Job Description  */}
             <div className="p-3">
               <h1 className="font-bold text-xl my-5">Job Description </h1>
               <p>
@@ -85,7 +85,7 @@ const JobDetails = () => {
                 porta proin in.
               </p>
             </div>
-            {/*  */}
+            {/* Professional Skills  */}
             <div className="p-3">
               <h1 className="font-bold text-xl my-5">Professional Skills</h1>
               <ul className="space-y-4 mt-6">
