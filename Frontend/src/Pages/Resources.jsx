@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import CourseCollection from "./CourseCollection";
+import LearningResources from "../Data/LearningResources";
 
 const Resources = () => {
   const [search, setSearch] = useState("");
@@ -20,6 +21,7 @@ const Resources = () => {
         </p>
       </header>
 
+      {/* Input from User */}
       <div className="max-w-5xl mx-auto relative mt-10 px-4">
         <input
           type="text"
@@ -42,6 +44,9 @@ const Resources = () => {
             d="M21 21l-4.35-4.35M5 11a6 6 0 1112 0 6 6 0 01-12 0z"
           />
         </svg>
+      </div>
+      <div>
+        <LearningResources></LearningResources>
       </div>
 
       <section className="mt-10 pb-20">

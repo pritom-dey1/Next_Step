@@ -10,7 +10,7 @@ import Dashboard from "../Pages/Dashboard";
 import Jobs from "../Pages/Jobs";
 import Resources from "../Pages/Resources";
 import About from "../Pages/About/About";
-import CareerTest from "../Components/Home/CareerTest"; 
+import CareerTest from "../Components/Home/CareerTest";
 import JobDetails from "../Pages/JobDetails";
 
 export const router = createBrowserRouter([

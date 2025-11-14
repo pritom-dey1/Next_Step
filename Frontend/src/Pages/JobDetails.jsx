@@ -2,8 +2,11 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Img from "../assets/authentication1.png";
 import JobFilterSidebar from "./JobFilterSidebar";
+import { useParams } from "react-router-dom";
 
 const JobDetails = () => {
+  
+  const { jobId } = useParams();
   return (
     <div>
       <Helmet>
