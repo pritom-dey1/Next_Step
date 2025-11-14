@@ -3,13 +3,11 @@ import Logo from "../../assets/NextstepLogo.png";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { UserContext } from "../../../context/UserContext";
-import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
-  const { i18n, t } = useTranslation();
 
   const handleButtonClick = () => {
     if (user) navigate("/dashboard");
@@ -42,36 +40,19 @@ const Navbar = () => {
                     : "hover:text-[#0a65cc] transition"
                 }
               >
-                {t(names[index].toLowerCase())}
+                {names[index]}
               </NavLink>
             );
           })}
         </div>
 
-        {/* Desktop Button + Language Switch */}
+        {/* Desktop Button */}
         <div className="hidden md:flex items-center gap-5">
-          {/* Language Switch */}
-          <div className="flex gap-2">
-            <button
-              onClick={() => i18n.changeLanguage("en")}
-              className="px-2 py-1 border rounded hover:bg-gray-200"
-            >
-              EN
-            </button>
-            <button
-              onClick={() => i18n.changeLanguage("bn")}
-              className="px-2 py-1 border rounded hover:bg-gray-200"
-            >
-              BN
-            </button>
-          </div>
-
-          {/* Main Action Button */}
           <button
             onClick={handleButtonClick}
             className="px-5 py-2.5 bg-[#0a65cc] text-white uppercase font-medium rounded-md hover:bg-[#0851a5] transition duration-300"
           >
-            {user ? t("dashboard") : t("explore_now")}
+            {user ? "Dashboard" : "Explore Now"}
           </button>
         </div>
 
@@ -103,34 +84,17 @@ const Navbar = () => {
               onClick={() => setOpen(false)}
               className="hover:text-[#0a65cc] transition"
             >
-              {t(name.toLowerCase())}
+              {name}
             </NavLink>
           ))}
 
-          {/* Language Switch (mobile) */}
-          <div className="flex gap-3">
-            <button
-              onClick={() => i18n.changeLanguage("en")}
-              className="px-3 py-1 border rounded-md"
-            >
-              EN
-            </button>
-            <button
-              onClick={() => i18n.changeLanguage("bn")}
-              className="px-3 py-1 border rounded-md"
-            >
-              BN
-            </button>
-          </div>
-
-          {/* Main Action Button */}
           <button
             onClick={handleButtonClick}
             className="px-5 py-2 bg-[#0a65cc] text-white rounded-md hover:bg-[#0851a5] transition"
           >
-            {user ? t("dashboard") : t("explore_now")}
+            {user ? "Dashboard" : "Explore Now"}
           </button>
-        </div>
+        </div> 
       )}
     </nav>
   );

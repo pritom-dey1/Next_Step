@@ -2,7 +2,6 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import Spotify from "../../assets/Vector.png";
 import Slack from "../../assets/logos.png";
-import Adobe from "../../assets/logo.png";
 import Linear from "../../assets/logo (2).png";
 import Asana from "../../assets/logo (1).png";
 
@@ -22,11 +21,6 @@ const MarqueE = () => {
             className="h-8 sm:h-10 md:h-12 object-contain"
           />
           <img
-            src={Adobe}
-            alt="Adobe"
-            className="h-8 sm:h-10 md:h-12 object-contain"
-          />
-          <img
             src={Linear}
             alt="Linear"
             className="h-8 sm:h-10 md:h-12 object-contain"
@@ -37,12 +31,17 @@ const MarqueE = () => {
             className="h-8 sm:h-10 md:h-12 object-contain"
           />
           <img
+            src={Spotify}
+            alt="Adobe"
+            className="h-8 sm:h-10 md:h-12 object-contain"
+          />
+          <img
             src={Slack}
             alt="Slack"
             className="h-8 sm:h-10 md:h-12 object-contain"
           />
           <img
-            src={Adobe}
+            src={Linear}
             alt="Adobe"
             className="h-8 sm:h-10 md:h-12 object-contain"
           />
