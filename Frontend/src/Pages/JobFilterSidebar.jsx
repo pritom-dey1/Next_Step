@@ -2,7 +2,7 @@ import React from "react";
 
 const JobFilterSidebar = () => {
   return (
-    <div className="w-72 bg-[#E9F3F2] p-6 rounded-lg space-y-6">
+    <div className="w-full bg-[#E9F3F2] p-6 rounded-lg space-y-6">
       <h2 className="font-semibold text-lg mb-2">Job Overview</h2>
       <hr />
 

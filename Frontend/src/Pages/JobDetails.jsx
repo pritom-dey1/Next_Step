@@ -33,10 +33,8 @@ const JobDetails = () => {
           <h1 className="font-bold text-3xl mb-2 text-gray-800">
             Corporate Solutions Executive
           </h1>
-
           <p className="text-gray-600 text-lg mb-5">Leffler and Sons</p>
           <hr className="my-4" />
-
           {/* Job Information */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
             <p>

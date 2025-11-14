@@ -3,8 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./Routes/Router";
-import { UserProvider } from "../context/UserContext";
-import "./i18n";
+import { UserProvider } from "../context/UserContext"; 
 
 
 createRoot(document.getElementById("root")).render(
