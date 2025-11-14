@@ -4,6 +4,8 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./Routes/Router";
 import { UserProvider } from "../context/UserContext";
+import "./i18n";
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
