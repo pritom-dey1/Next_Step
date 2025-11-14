@@ -39,7 +39,7 @@ const JobFilterSidebar = () => {
       {/* Offered Salary */}
       <div>
         <p className="text-sm text-gray-500">Offered Salary</p>
-        <p className="font-medium">$40,000 – $42,000</p>
+        <p className="font-medium">$40,000 - $42,000</p>
       </div>
 
       {/* Location */}

@@ -89,18 +89,26 @@ const JobDetails = () => {
             </div>
             {/*  */}
             <div className="p-3">
-              <h1 className="font-bold text-xl my-5">Key Responsibilities</h1>
-              {/* <p>
-                Nunc sed a nisl purus. Nibh dis faucibus proin lacus tristique.
-                Sit congue non vitae odio sit erat in. Felis eu ultrices a sed
-                massa. Commodo fringilla sed tempor risus laoreet ultricies
-                ipsum. Habitasse morbi faucibus in iaculis lectus. Nisi enim
-                feugiat enim volutpat. Sem quis viverra viverra odio mauris
-                nunc. Et nunc ut tempus duis nisl sed massa. Ornare varius
-                faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim
-                augue lorem amet adipiscing cursus fames mauris. Tortor amet
-                porta proin in.
-              </p> */}
+              <h1 className="font-bold text-xl my-5">Professional Skills</h1>
+              <ul className="space-y-4 mt-6">
+                {[
+                  "Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu.",
+                  "Cras facilisis dignissim augue lorem amet adipiscing cursus fames mauris. Tortor amet porta proin in.",
+                  "Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augue lorem amet adipiscing cursus fames.",
+                  "Experienced in designing intuitive UI/UX layouts with industry-standard component libraries and styling tools.",
+                  "Skilled in managing backend logic, API integration, and secure data handling for dynamic platforms",
+                  "Capable of optimizing application performance through efficient state management and clean architecture.",
+                  "Strong understanding of version control, collaborative workflows, and industry best practices in software development.",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-gray-700 leading-relaxed hover:text-[#0a65cc] transition duration-200"
+                  >
+                    <span className="mt-1 w-3 h-3 rounded-full bg-[#0a65cc]"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
           {/* Sidebar */}
