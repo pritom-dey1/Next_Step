@@ -1,55 +1,64 @@
 import React from "react";
-import image1 from "../../assets/authentication1.png";
-import image2 from "../../assets/authentication2.png";
+import Card1 from "../../assets/Icon+ bg (2).png";
+import Card2 from "../../assets/Icon+ bg (1).png";
+import Card3 from "../../assets/Icon+ bg.png";
+import Card4 from "../../assets/check-mark 1.png";
 
 const ExtraAbout = () => {
-  const mentors = [
+  const steps = [
     {
-      name: "Abdullah all Mojahid",
-      role: "Fronend Developer & Problem Solver",
-      image: { image1 },
-      bio: "Guides students in career planning and skill development with AI-driven insights.",
+      name: "Create Account",
+      image: Card1,
+      description: "Sign up quickly and securely to start your journey.",
     },
     {
-      name: "Pritom Dey",
-      role: "Backend Developer",
-      image: { image2 },
-      bio: "Provides mentorship on coding, internships, and practical industry skills.",
+      name: "Upload Resume",
+      image: Card2,
+      description: "Upload your resume to showcase your skills and experience.",
+    },
+    {
+      name: "Find Jobs",
+      image: Card3,
+      description:
+        "Browse opportunities tailored to your profile and interests.",
+    },
+    {
+      name: "Apply Job",
+      image: Card4,
+      description:
+        "Easily apply for jobs and track your applications in one place.",
     },
   ];
 
   return (
     <section className="min-h-screen bg-base-200 px-6 py-16">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-[#0a65cc] mb-6">
-          Our Mentor Panel
+        <h1 className="text-4xl md:text-5xl font-bold text-[#0a65c] mb-4">
+          How It Works
         </h1>
-
-        <p className="text-center text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-12">
-          Experienced mentors guiding students and youth towards their dream
-          careers.
+        <p className="text-gray-700 dark:text-gray-300 pb-12 max-w-2xl mx-auto leading-relaxed">
+          Discover how our platform guides you step by step to explore
+          opportunities, build skills, and achieve your goals efficiently and
+          confidently.
         </p>
 
-        {/* Mentor Cards */}
-        <div className="flex flex-wrap justify-center gap-6">
-          {mentors.map((mentor, index) => (
+        {/* Steps Cards */}
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+          {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-base-100 shadow-lg rounded-xl p-6 flex flex-col items-center text-center hover:shadow-2xl transition w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+              className="bg-base-100 shadow-lg rounded-xl p-6 flex flex-col items-center text-center hover:shadow-2xl transition"
             >
               <img
-                src={mentor.image}
-                alt=""
-                className="w-20 h-20 rounded-sm object-cover mb-4"
+                src={step.image}
+                alt={step.name}
+                className="w-20 h-20 object-contain mb-4"
               />
-              <h2 className="text-xl font-semibold text-[#0a65cc]">
-                {mentor.name}
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 italic mb-3">
-                {mentor.role}
+              <h5 className="text-xl font-semibold pt-2 pb-2">{step.name}</h5>
+              <p className="text-gray-700 dark:text-gray-300">
+                {step.description}
               </p>
-              <p className="text-gray-700 dark:text-gray-300">{mentor.bio}</p>
             </div>
           ))}
         </div>
