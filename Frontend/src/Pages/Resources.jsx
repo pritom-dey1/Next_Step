@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import CourseCollection from "./CourseCollection";
-import LearningResources from "../Data/LearningResources";
-
+import CourseCollection from "./CourseCollection"; 
 const Resources = () => {
   const [search, setSearch] = useState("");
 
@@ -45,9 +43,7 @@ const Resources = () => {
           />
         </svg>
       </div>
-      <div>
-        <LearningResources></LearningResources>
-      </div>
+      
 
       <section className="mt-10 pb-20">
         <CourseCollection search={search} />
